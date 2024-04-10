@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "whu-thesis", // 左上角的 title
+  title: "whuthesis", // 左上角的 title
   description: "LaTeX Thesis Template for Wuhan University",
   srcDir: 'src',
   base: "/whuthesis-wiki/",
