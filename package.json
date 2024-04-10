@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@kossnocorp/estrella": "^1.4.1",
+    "@web-printer/core": "^0.3.0",
+    "@web-printer/javascript-info": "^0.3.0",
+    "hexo": "^6.3.0",
+    "hexo-cli": "^4.3.1",
+    "hexo-renderer-pandoc": "^0.3.1",
+    "marginnote": "^0.9.34",
+    "playwright": "^1.42.1",
+    "styled-components": "^6.1.8"
+  },
+  "devDependencies": {
+    "tsx": "^3.14.0",
+    "vitepress": "^1.0.2"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  }
+}
