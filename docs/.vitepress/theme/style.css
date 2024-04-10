@@ -143,15 +143,15 @@
 
 :root {
   /* Home 页顶部导航栏的最大宽度 */
-  --vp-layout-max-width: 1440px;
+  --vp-layout-max-width: 1210px;
 }
 
 
 /* 调整 description 的宽度 */
-.container .main {
+.VPHero.has-image .container .main {
   max-width: 700px !important;
 }
 
-.container .text {
+.VPHero.has-image .container .text {
   max-width: 700px;
 }
