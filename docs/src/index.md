@@ -5,30 +5,31 @@ layout: home
 hero:
   name: "whuthesis"
   text: "LaTeX Thesis Template for Wuhan University."
-  tagline: DevelopING...
+  tagline: "努力成为武汉大学最强的 LaTeX 论文模板"
   image:
     src: /background.png
     alt: 'background'
   actions:
     - theme: brand
-      text: 介绍
-      link: /introduction
-    - theme: alt
-      text: 安装与更新
-    - theme: alt
-      text: 使用手册
-    - theme: alt
-      text: 如何提问
+      text: 开发中
+    # - theme: brand
+    #   text: 介绍
+    #   link: /guide/
+    # - theme: alt
+    #   text: 安装与更新
+      # link: 
+    # - theme: alt
+    #   text: 如何提问
     - theme: alt
       text: 源码
       link: 'https://github.com/xkwxdyy/whuthesis'
 
 features:
   - title: 模块化
-    details: 基于 CusTeX 开发，采用模块和库的结构。
+    details: 基于 CusTeX 与 xtemplate 开发，高度模块化，并用库来组装。
   - title: 应用范围广
     details: 适配本科、硕士、博士及硕博的开题报告。
-  - title: 可定制化
-    details: 每个库都高度模块化，为用户提供了丰富的定制化接口。
+  - title: 可定制
+    details: 为用户提供了丰富的定制化接口，可以方便地针对特殊需求进行模板定制。
 ---
 

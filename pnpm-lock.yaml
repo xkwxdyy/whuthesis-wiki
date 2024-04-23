@@ -34,6 +34,9 @@ dependencies:
     version: 6.1.8(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
+  shiki:
+    specifier: ^1.3.0
+    version: 1.3.0
   tsx:
     specifier: ^3.14.0
     version: 3.14.0
@@ -822,6 +825,10 @@ packages:
 
   /@shikijs/core@1.2.4:
     resolution: {integrity: sha512-ClaUWpt8oTzjcF0MM1P81AeWyzc1sNSJlAjMG80CbwqbFqXSNz+NpQVUC0icobt3sZn43Sn27M4pHD/Jmp3zHw==}
+    dev: true
+
+  /@shikijs/core@1.3.0:
+    resolution: {integrity: sha512-7fedsBfuILDTBmrYZNFI8B6ATTxhQAasUHllHmjvSZPnoq4bULWoTpHwmuQvZ8Aq03/tAa2IGo6RXqWtHdWaCA==}
     dev: true
 
   /@shikijs/transformers@1.2.4:
@@ -1927,6 +1934,12 @@ packages:
       '@shikijs/core': 1.2.4
     dev: true
 
+  /shiki@1.3.0:
+    resolution: {integrity: sha512-9aNdQy/etMXctnPzsje1h1XIGm9YfRcSksKOGqZWXA/qP9G18/8fpz5Bjpma8bOgz3tqIpjERAd6/lLjFyzoww==}
+    dependencies:
+      '@shikijs/core': 1.3.0
+    dev: true
+
   /single-line-log@1.1.2:
     resolution: {integrity: sha512-awzaaIPtYFdexLr6TBpcZSGPB6D1RInNO/qNetgaJloPDF/D0GkVtLvGEp8InfmLV7CyLyQ5fIRP+tVN/JmWQA==}
     dependencies:
@@ -2145,7 +2158,7 @@ packages:
       focus-trap: 7.5.4
       mark.js: 8.11.1
       minisearch: 6.3.0
-      shiki: 1.2.4
+      shiki: 1.3.0
       vite: 5.2.8
       vue: 3.4.21
     transitivePeerDependencies:

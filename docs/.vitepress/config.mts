@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import latex3 from '../src/LaTeX-Expl3.tmLanguage.json';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -13,10 +14,23 @@ export default defineConfig({
     },
     logo : '/logo.png',  // 左上角的 logo
     nav: [
-      { text: 'Home', link: '/' },
-      { text: '文档指南', link: '/introduction/' },
+      // { text: 'Home', link: '/' },
+      {
+        text: '文档指南',
+        items:[
+          { text: '前言', link: '/guide/front/' },
+          { text: '后记', link: '/guide/back/' }
+        ]
+      },
       { text: '模板下载', link: 'https://github.com/xkwxdyy/whuthesis/releases/latest' },
-      { text: '开发 log', link: '/develop-log/' },
+      {
+        text: '开发',
+        items: [
+          { text: 'API', link: '/API/' },
+          { text: 'log', link: '/develop-log/' },
+          { text: '参与开发', link: 'https://github.com/xkwxdyy/whuthesis/pulls'}
+        ]
+      },
       {
         text: '反馈',
         items: [
@@ -25,27 +39,61 @@ export default defineConfig({
           { text: 'Email', link: 'mailto:kangweixia_xdyy@163.com' }
         ]
       },
-      { text: '捐赠与打赏', link: '/introduction/donation'}
+      { text: '捐赠', link: '/donation'}
     ],
 
-    sidebar: [
-      {
-        text: '介绍',
-        link: '/introduction/',
-        items: [
-          { text: '捐赠与打赏', link: '/introduction/donation' },
-        ]
-      },
-      {
-        text: '开发 log',
-        link: '/develop-log/',
-        items: [
-          { text: '库的开发', link: '/develop-log/library/', collapsed: false },
-          // { text: 'Runtime API Examples', link: '/api-examples' }
-        ],
-        collapsed: false
-      },
-    ],
+    sidebar:{
+      // 指南的侧边栏
+      '/guide/front/':[
+        {
+          text: '前言',
+          items:[
+            {
+              text: '使用之前'
+            }
+          ]
+        },
+      ],
+      '/guide/back/':[
+        {
+          text: '后记',
+          items:[
+            {
+              text: '致谢',
+              link: '/guide/back/acknowledgements'
+            }
+          ]
+        }
+      ],
+      // 开发 log 的侧边栏
+      '/develop-log': [
+        {
+          text: '开发 log',
+          link: '/develop-log/',
+          collapsed: false,
+          items:[
+            {
+              text: '开发杂记',
+              link: '/develop-log/daily',
+              collapsed: false
+            }
+          ]
+        },
+        {
+          text: '库的开发', 
+          link: '/develop-log/library/', 
+          collapsed: false 
+        },
+      ],
+      // API 的侧边栏
+      '/API':[
+        {
+          text: 'API',
+          link: '/API/',
+          collapsed: false
+        }
+      ],
+    },
 
     socialLinks: [
       { 
@@ -83,6 +131,13 @@ export default defineConfig({
       }
     },
 
-    externalLinkIcon: true
+    externalLinkIcon: true,
+  },
+
+  markdown: {
+    // https://github.com/vuejs/vitepress/issues/3779#issuecomment-2049650973
+    // > That language is not fully compatible with Shiki types. But if it works you can use // @ts-ignore or // @ts-expect-error above that line.
+    // @ts-ignore
+    languages: [latex3]
   }
 })
